@@ -51,11 +51,24 @@ end)
 ```lua
 local volumeSlider = Window:Slider(
     "Volume",                          
-    0, -- Minimum Value                               
-    100,                               
-    16,                                
+    0, -- Minimum Value                          
+    100, -- Maximum Value                             
+    16, -- Default Value                              
     function(value)                    
         print("Volume set to:", value)
     end
+)
+```
+
+## Drop-down
+```lua
+local classDropdown = Window:Dropdown(
+    "Select Class",
+-- Dropdown Name
+    { "Warrior", "Mage", "Rogue" },    -- list of options
+    function(choice)                   
+        print("You picked:", choice)
+    end,
+    true                               
 )
 ```

@@ -1,1 +1,7 @@
-
+local TurtleLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Git-art-byte/Turtle-UI-Library/refs/heads/main/Turtle.luau"))()
+local Window = TurtleLib:Window("AutoFarm")
+TurtleLib:Keybind("RightShift")
+Window:Label("Icy")
+Window:Toggle("Farm", false, function(state)
+    print("Toggle is now:", state)
+end)
